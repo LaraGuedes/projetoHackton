@@ -15,7 +15,7 @@ function Especialidades() {
         <S.SectionEspecialidades>
             <section class="sessaoEspecialidades">
                 <section class="informacaoEspecialidades">
-                    <h2>Conheça nossas especialidades:</h2>
+                    <h2>Conheça nossas especialidades</h2>
                 </section>
                 <section class="tipoespecialidades">
                     <div class="medicos">

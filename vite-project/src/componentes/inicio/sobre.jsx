@@ -6,6 +6,7 @@ import * as S from "./styleInicio.jsx";
 import Missao from "../../assets/imagens/missao.png"
 import Visao from "../../assets/imagens/visao.png"
 import Valores from "../../assets/imagens/valores.png"
+import Site from "../../assets/imagens/simulacaoSite.png"
 
 // Rotas
 
@@ -14,7 +15,9 @@ function Sobre() {
         <S.SectionSobre>
             <section className="sessaoSobre">
                 <section className="animacao">
-                    
+                    <div className="imagemSite">
+                        <img src={Site} alt="" width="100%"/>
+                    </div>
                 </section>
                 <section className="informacoesImportantes">
                     <div className="sobreHospital">

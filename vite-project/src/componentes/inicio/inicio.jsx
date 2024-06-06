@@ -3,7 +3,7 @@ import * as S from "./styleInicio.jsx";
 // import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 // Imagens
-import Logo from "../../assets/imagens/logo.png";
+import Imagem from "../../assets/imagens/images.jpg";
 
 
 function Inicio() {
@@ -24,7 +24,7 @@ function Inicio() {
             
             <section className="imagemClinica">
                 <div className="img-info">
-                    <img src="./images.jpg" alt="" width="100%"/>
+                    <img src={Imagem} alt="" width="100%"/>
                 </div>
             </section>
         </section>

@@ -4,9 +4,6 @@ export const SectionInicio = styled.section`
     
 header{
     width: 100%;
-    height: 150px;
-
-    display: inline-flex;
 }
 
 .logo{
@@ -19,7 +16,6 @@ header{
 }
 
 .img-logo{
-    width: 7rem;
     margin: 10px;
     padding: 10px;
 }
@@ -27,23 +23,17 @@ header{
 .nome{
     font-size: 25px;
     font-weight: 700;
-    color: #017143;
+    color: #0DB26F;
+;
 }
 
 nav{
     width: 60%;
     height: 100%;
 
-    padding-right: 10px;
-    gap: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: end;
 }
 
 ul{
-    display: flex;
-    flex-direction: row;
     list-style: none;
 }
 
@@ -78,7 +68,7 @@ li::after {
     width: 0;
     height: 2px;
     display: block;
-    background: #017143;
+    background: #0DB26F;
     transition: width 0.3s;
     left: 0;
     bottom: 0;
@@ -87,9 +77,12 @@ nav ul li:hover::after {
     width: 100%;
 }
 
+.inicio a, .sobre a, .especialidades a{
+    color: #333; 
+}
+
 .cadastro {
-    background-color: #28a745; 
-    color: white; 
+    background-color: #0DB26F; 
     border: none;
     padding: 10px 20px; 
     font-size: 20px;
@@ -99,20 +92,56 @@ nav ul li:hover::after {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
+.cadastro a{
+    color: white; 
+}
+
 .cadastro:hover {
-    background-color: #218838; 
+    background-color: #0DB26F; 
     transform: translateY(-2px); 
 }
 
 .cadastro:active {
-    background-color: #1e7e34; 
+    background-color: #0DB26F; 
     transform: translateY(0);
     
 }
+@media screen and (max-width: 1030px) {
+    .logo{
+        width: 100%;
+    }
+    .img-logo{
+        width: 6rem;
+    }
+
+}
 
 @media screen and (min-width: 1030px) {
+    header{
+        width: 100%;
+        height: 150px;
     
+        display: inline-flex;
+    }
+    
+    .img-logo{
+        width: 7rem;
+        margin: 10px;
+        padding: 10px;
+    }
 
+    nav{
+        padding-right: 10px;
+        gap: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
 }
 `
 export const SectionPaginaInicio = styled.section`
@@ -141,7 +170,7 @@ export const SectionPaginaInicio = styled.section`
 }
 
 .textoInformativo span{
-    color: #017143;
+    color: #0DB26F;
     font-size: 70px;
 }
 
@@ -154,7 +183,7 @@ export const SectionPaginaInicio = styled.section`
 }
 
 .botaoInformativo button {
-    background-color: #28a745; 
+    background-color: #0DB26F; 
     color: white; 
     border: none; 
     padding: 15px 30px; 
@@ -167,12 +196,12 @@ export const SectionPaginaInicio = styled.section`
 }
 
 .botaoInformativo button:hover {
-    background-color: #218838; 
+    background-color: #0DB26F; 
     transform: translateY(-2px); 
 }
 
 .botaoInformativo button:active {
-    background-color: #1e7e34; 
+    background-color: #0DB26F; 
     transform: translateY(0); 
 }
 
@@ -253,11 +282,20 @@ export const SectionSobre = styled.section`
     .sessaoSobre{
     color: #333;
     width: 100%;
-}
+    }
 
-.animacao{
-    width: 50%;
-}
+    .animacao{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagemSite{
+        display: flex;
+        justify-items: center;
+        align-items: center;    
+    }
 
 .informacoesImportantes{
     width: 80%;
@@ -269,7 +307,7 @@ export const SectionSobre = styled.section`
     font-size: 40px;
     line-height: 58px;
     font-weight: 600;
-    color: #242f51;
+    color: #0DB26F;
 }
 
 .informacoesImportantes h3, h2{
@@ -305,6 +343,21 @@ export const SectionSobre = styled.section`
     color: #40975f;
 }
 
+@media screen and (max-width: 1030px){
+    .sessaoSobre{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .animacao{
+        margin: auto;
+    }
+
+    .imagemSite{
+        padding: 10px;
+    }
+}
+
 @media screen and (min-width: 1030px) {
     .sessaoSobre{
         display: flex;
@@ -316,8 +369,12 @@ export const SectionSobre = styled.section`
         display: flex;
         flex-direction: column;
         align-items: end;
-        padding-right: 150px;
+        padding-left: 10px;
     }
+
+    .animacao {
+    padding-left: 30px;
+    }   
 
     .missao, .visao, .valores{
         width: 30rem;
@@ -335,12 +392,13 @@ export const SectionEspecialidades = styled.section`
 }
 
 .informacaoEspecialidades{
-    width: 50%;
+    width: 100%;
     font-size: 30px;
     line-height: 50px;
     font-weight: 600;
     color: #333;
-    padding: 10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .tipoespecialidades{
@@ -358,6 +416,7 @@ export const SectionEspecialidades = styled.section`
 .medicos{
     width: 280px;
     padding: 20px;
+    margin: auto;
 }
 
 .img-medicos{
@@ -365,6 +424,14 @@ export const SectionEspecialidades = styled.section`
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
+}
+
+@media screen and (max-width: 1030px){
+    .informacaoEspecialidades {
+        width: 80%;
+        font-size: 20px;
+        margin-top: 10px;
+    }
 }
 
 @media screen and (min-width: 1030px) {
