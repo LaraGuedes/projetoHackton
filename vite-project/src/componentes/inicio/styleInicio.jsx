@@ -106,10 +106,12 @@ nav ul li:hover::after {
     transform: translateY(0);
     
 }
+
 @media screen and (max-width: 1030px) {
     .logo{
         width: 100%;
     }
+
     .img-logo{
         width: 6rem;
     }
@@ -146,8 +148,8 @@ nav ul li:hover::after {
 `
 export const SectionPaginaInicio = styled.section`
     .principal{
-    width: 100%;
-    /* height: 500px; */
+        width: 100%;
+        /* height: 500px; */
 }
 
 .informativo {
@@ -157,21 +159,21 @@ export const SectionPaginaInicio = styled.section`
 
 .textoInformativo p {
     text-align: left;
-    font-size: 25px;
     color: #333;
+    font-size: 20px;
 
     margin-bottom: 20px;
     padding: 10px;
 }
 
 .textoInformativo h2{
-    font-size: 60px;
     font-weight: 500;
+    font-size: 30px;
 }
 
 .textoInformativo span{
     color: #0DB26F;
-    font-size: 70px;
+    font-size: 40px;
 }
 
 .botaoInformativo {
@@ -241,6 +243,39 @@ export const SectionPaginaInicio = styled.section`
     align-items: center;
 }
 
+@media screen and (max-width: 1030px) {
+
+    .textoInformativo h2 {
+        font-size: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .textoInformativo span {
+        font-size: 40px;
+    }
+
+    .textoInformativo p {
+        font-size: 20px;
+    }
+    
+    .botaoInformativo button{
+        font-size: 20px;
+    }
+
+    // Se der tempo mudar
+    .botaoInformativo::before{
+        top: -5px;
+        left: -15px;
+        right: -20px;
+        bottom: -5px;
+    }
+    
+    .informativo{
+        margin: auto;
+    }
+
+}
 
 @media screen and (min-width: 1030px){
     .principal{
@@ -259,6 +294,15 @@ export const SectionPaginaInicio = styled.section`
     
     .textoInformativo{
         width: 70%;
+        font-size: 25px;
+    }
+
+    .textoInformativo h2{
+        font-size: 60px;
+    }   
+
+    .textoInformativo span{
+    font-size: 70px;
     }
 
     .textoInformativo span{
@@ -280,8 +324,8 @@ export const SectionPaginaInicio = styled.section`
 `
 export const SectionSobre = styled.section`
     .sessaoSobre{
-    color: #333;
-    width: 100%;
+        color: #333;
+        width: 100%;
     }
 
     .animacao{
@@ -347,6 +391,7 @@ export const SectionSobre = styled.section`
     .sessaoSobre{
         display: flex;
         flex-direction: column-reverse;
+        padding-left: 10px;
     }
 
     .animacao{
@@ -430,7 +475,12 @@ export const SectionEspecialidades = styled.section`
     .informacaoEspecialidades {
         width: 80%;
         font-size: 20px;
-        margin-top: 10px;
+        margin-top: 30px;
+    }
+
+    .medicos{
+        margin: auto;
+        width: 180px;
     }
 }
 
