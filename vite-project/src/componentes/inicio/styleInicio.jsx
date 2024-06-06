@@ -401,6 +401,14 @@ export const SectionSobre = styled.section`
     .imagemSite{
         padding: 10px;
     }
+
+    .sobreHospital h2{
+        text-align: center;
+    }
+
+    .informacoesImportantes{
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 1030px) {
@@ -442,8 +450,6 @@ export const SectionEspecialidades = styled.section`
     line-height: 50px;
     font-weight: 600;
     color: #333;
-    padding-bottom: 10px;
-    text-align: center;
 }
 
 .tipoespecialidades{
@@ -473,9 +479,13 @@ export const SectionEspecialidades = styled.section`
 
 @media screen and (max-width: 1030px){
     .informacaoEspecialidades {
-        width: 80%;
+        width: 100%;
         font-size: 20px;
+
         margin-top: 30px;
+        padding-bottom: 10px;
+        
+        text-align: center;
     }
 
     .medicos{
@@ -490,6 +500,13 @@ export const SectionEspecialidades = styled.section`
         text-align: center;
         display: inline-flex;
         justify-content: space-around;
+    }
+
+    .informacaoEspecialidades {
+        text-align: center;
+        padding-bottom: 30px;
+        
+        padding-top: 10px;
     }
 }
 `
