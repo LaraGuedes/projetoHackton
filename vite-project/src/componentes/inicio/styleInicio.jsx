@@ -266,13 +266,17 @@ export const SectionPaginaInicio = styled.section`
     // Se der tempo mudar
     .botaoInformativo::before{
         top: -5px;
-        left: -15px;
-        right: -20px;
+        left: -10px;
+        right: -70px;
         bottom: -5px;
     }
     
     .informativo{
         margin: auto;
+    }
+
+    .img-info{
+        width: 250px;
     }
 
 }
@@ -318,7 +322,7 @@ export const SectionPaginaInicio = styled.section`
     }
     
     .img-info{
-        width: 500px;
+        width: 400px;
     }
 }
 `

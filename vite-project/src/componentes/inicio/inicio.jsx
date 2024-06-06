@@ -3,7 +3,7 @@ import * as S from "./styleInicio.jsx";
 // import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 // Imagens
-import Imagem from "../../assets/imagens/images.jpg";
+import Imagem from "../../assets/imagens/cadastrar.png";
 
 
 function Inicio() {
@@ -18,7 +18,7 @@ function Inicio() {
                 </div>
 
                 <div className="botaoInformativo">
-                    <button>Agendar</button>
+                    <button>Agendamento <br/> 100% online</button>
                 </div>
             </section>
             
