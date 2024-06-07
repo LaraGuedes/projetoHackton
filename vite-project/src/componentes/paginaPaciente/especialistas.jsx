@@ -20,7 +20,7 @@ function MedicosEspecialistas() {
                         </ul>
                     </div>
                     <div class="medicos">
-                        <h2>Neurologia</h2>
+                        <h2>Nefrologia</h2>
                         <ul>
                             <li>Dr. Ana Pereira</li>
                             <li>Dr. Ricardo Lima</li>
@@ -28,7 +28,7 @@ function MedicosEspecialistas() {
                         </ul>
                     </div>
                     <div class="medicos">
-                        <h2>Cardiologia</h2>
+                        <h2>Ortopedia</h2>
                         <ul>
                             <li>Dr. João Silva</li>
                             <li>Dr. Maria Oliveira</li>
@@ -36,7 +36,7 @@ function MedicosEspecialistas() {
                         </ul>
                     </div>
                     <div class="medicos">
-                        <h2>Neurologia</h2>
+                        <h2>Psiquiatria</h2>
                         <ul>
                             <li>Dr. Ana Pereira</li>
                             <li>Dr. Ricardo Lima</li>
@@ -44,7 +44,7 @@ function MedicosEspecialistas() {
                         </ul>
                     </div>
                     <div class="medicos">
-                        <h2>Cardiologia</h2>
+                        <h2>Endocrinologia</h2>
                         <ul>
                             <li>Dr. João Silva</li>
                             <li>Dr. Maria Oliveira</li>
@@ -52,7 +52,7 @@ function MedicosEspecialistas() {
                         </ul>
                     </div>
                     <div class="medicos">
-                        <h2>Neurologia</h2>
+                        <h2>Geriatria</h2>
                         <ul>
                             <li>Dr. Ana Pereira</li>
                             <li>Dr. Ricardo Lima</li>
