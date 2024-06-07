@@ -17,9 +17,9 @@ function Inicio() {
           <div class="proximasConsultas">
             <h4>Próximas consultas:</h4>
             <ul>
-              <li>Dr. João Silva - Data: 10/05/2023 - Horário: 10:00</li>
-              <li>Dra. Maria Oliveira - Data: 15/06/2023 - Horário: 14:30</li>
-              <li>Dra. Ana Costa - Data: 25/08/2023 - Horário: 11:00</li>
+              <li>Dr. João Silva - Data: 21/06/2024 - Horário: 12:00</li>
+              <li>Dra. Maria Oliveira - Data: 29/06/2024 - Horário: 16:00</li>
+              <li>Dra. Carlos Souza - Data: 30/07/2024 - Horário: 10:00</li>
             </ul>
           </div>
           <p>Outros serviços:</p>
@@ -28,20 +28,20 @@ function Inicio() {
               <div class="icones">
                 <img src={Historico} alt="" width="100%" />
               </div>
-              <Link to="/paciente/historico">Historico</Link>
+              <Link to="/paciente/historico" className="buscas">Historico</Link>
             </div>
-            {/* <div class="elementos">
+            <div class="elementos">
               <div class="icones">
                 <img src={Agenda} alt="" width="100%" />
               </div>
-              <Link to="/paciente/historico">Agendamentos</Link>
+              <Link to="/paciente/agendamento" className="buscas">Agendamentos</Link>
               
-            </div> */}
+            </div>
             <div class="elementos">
               <div class="icones">
                 <img src={Especialistas} alt="" width="100%" />
               </div>
-              <Link to="/paciente/especialistas"> Lista de especialistas</Link>
+              <Link to="/paciente/especialistas" className="buscas"> Lista de especialistas</Link>
             </div>
           </div>
       </S.SectionInicio>

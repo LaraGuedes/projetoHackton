@@ -8,7 +8,7 @@ import Dados from "../paginaPaciente/meusDados.jsx";
 import Especialistas from "../paginaPaciente/especialistas.jsx";
 import Historico from "../paginaPaciente/historico.jsx";
 // import NovaConsulta from "../paginaPaciente/novaConsulta.jsx";
-// import Agendamento from "../paginaPaciente/agendamento.jsx";
+import Agendamentos from "./agendamento.jsx";
 import Sair from "../inicio/inicio.jsx";
 import Login from "../login/templates/Login/index.jsx";
 import Inicio from "./inicio.jsx";
@@ -42,6 +42,7 @@ function NavegacaoPaciente() {
             <Route path="/meusDados" element={<Dados />} />
             <Route path="/especialistas" element={<Especialistas />} />
             <Route path="/historico" element={<Historico />} />
+            <Route path="/agendamento" element={<Agendamentos />} />
           </Routes>
         </section>
     </S.Sectionpagina>

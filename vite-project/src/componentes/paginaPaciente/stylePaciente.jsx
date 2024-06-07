@@ -160,6 +160,27 @@ export const SectionInicio = styled.section`
     padding: 10px;
 }
 
+.buscas{
+    position: relative;
+        display: inline-block;
+        padding-bottom: 3px; 
+}
+
+.buscas::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px; 
+        background-color: #0DB26F; 
+        transform: scaleX(0); 
+        transition: transform 0.3s ease;
+    }
+    .buscas:hover::after {
+        transform: scaleX(1);
+    }
+
 
 
 @media screen and (max-width: 1030px) {
@@ -186,7 +207,6 @@ export const SectionInicio = styled.section`
 `
 
 export const SectionDados = styled.section`
-
 
 .titulo {
     font-size: 28px;
@@ -234,11 +254,13 @@ export const SectionDados = styled.section`
 }
 
 .botao {
-    background-color: #007bff;
+    background-color: #0DB26F;
 }
 
 .sair {
-    background-color: #dc3545;
+    background-color: transparent;
+    
+    border: 1px solid black;
 }
 
 .botao:hover, .sair:hover {
@@ -336,6 +358,10 @@ export const SectionHistorico = styled.section`
 .botaoVoltar:hover {
     background-color: #0DB26F; 
     transform: translateY(-2px); 
+}
+
+.direita a{
+    color: #000;
 }
 
 `

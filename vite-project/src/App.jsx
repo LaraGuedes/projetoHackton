@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavegacaoPaciente from "./componentes/paginaPaciente/navegacao.jsx";
 import Login from './componentes/login/templates/Login/index.jsx'
 import Cadastro from './componentes/login/templates/cadastro/index.jsx'
+import "./style.css"
 
 const GlobalStyle = createGlobalStyle`
   *{
