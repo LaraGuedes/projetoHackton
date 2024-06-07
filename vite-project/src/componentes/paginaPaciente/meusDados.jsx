@@ -1,79 +1,76 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import * as S from "./stylePaciente.jsx";
 
-
 function Dados() {
+    const [pessoa, setPessoa] = useState({
+        nome: 'João Silva',
+        cpf: '123.456.789-00',
+        telefone: '(11) 98765-4321',
+        endereco: 'Rua Exemplo, 123',
+        dataNascimento: '01/01/1990', // Adicionei essa informação para exemplificar
+        senha: '********' // Adicionei essa informação para exemplificar
+    });
+    const [editando, setEditando] = useState(false);
+    const [novoTelefone, setNovoTelefone] = useState(pessoa.telefone);
+    const [novoEndereco, setNovoEndereco] = useState(pessoa.endereco);
+    const [erro, setErro] = useState('');
+
+    useEffect(() => {
+        // Atualiza os estados com os dados da pessoa
+        setNovoTelefone(pessoa.telefone);
+        setNovoEndereco(pessoa.endereco);
+    }, [editando]);
+
+    const editarDados = () => {
+        setEditando(true);
+    };
+
+    const concluirEdicao = () => {
+        if (!novoTelefone.trim() || !novoEndereco.trim()) {
+            setErro('Telefone e Endereço não podem estar vazios.');
+            return;
+        }
+        
+        setPessoa({
+            ...pessoa,
+            telefone: novoTelefone,
+            endereco: novoEndereco
+        });
+        setEditando(false);
+        setErro('');
+    };
+
     return (
         <S.SectionDados>
-            <section class="direita">
-        <h2>MEUS DADOS</h2>
-
-        <form>
-            <div class="dado">
-                <label class="campo">NOME COMPLETO:</label>
-                <br/>
-                <input id="name" type="text" name="name" placeholder="Digite seu nome" />
-            </div>
-            
-            <div class="dado">
-                <label class="campo">DATA DE NASCIMENTO:</label>
-                <br/>
-                <input id="number" type="date" name="data" />
-            </div>
-
-
-            <div class="dado">
-                <label for="cpf" class="campo"> CPF:</label>
-                <br/>
-                <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" />
-            </div>
-
-            <div class="dado">
-                <label class="campo">EMAIL:</label>
-                <br/>
-                <input id="email" type="email" name="email" placeholder="Digite seu Email" />
-            </div>
-
-            <div class="dado">
-                <label class="campo">ENDEREÇO</label>
-                <br/>
-                <input id="endereco" type="text" name="endereco" placeholder="Digite seu Endereço" />
-            </div>
-
-            <div class="dado">
-                <label class="campo">TELEFONE</label>
-                <br/>
-                <input id="telefone" type="number" name="telefone" placeholder="Digite seu Telefone" />
-            </div>
-
-            <div class="dado">
-                <label class="campo">CELULAR:</label>
-                <br/>
-                <input id="telefone" type="number" name="telefone" placeholder="Digite seu Celular" />
-
-            </div>
-
-            <div class="dado">
-                <label class="campo">SENHA:</label>
-                <br/>
-                <input type="password" id="senha" placeholder="Crie uma Senha" />
-            </div>
-
-            <div class="dado">
-                <label class="campo">CONFIRMAÇÃO DE SENHA:</label>
-                <br/>
-                <input type="password" id="confirmarsenha" placeholder="Confirme sua Senha" />
-            </div>
-
-            <div class="botaoFinalizar">
-                <button type="submit" class="finalizar">Finalizar</button>
-            </div>
-        </form>
-    </section>
+            <h1 className="titulo">Informações da Pessoa</h1>
+            {!editando ? (
+                <div id="dadosPessoa" className="dados">
+                    <p><strong>Nome:</strong> <span id="nome">{pessoa.nome}</span></p>
+                    <p><strong>CPF:</strong> <span id="cpf">{pessoa.cpf}</span></p>
+                    <p><strong>Telefone:</strong> <span id="telefone">{pessoa.telefone}</span></p>
+                    <p><strong>Data de nascimento:</strong> <span id="dataNascimento">{pessoa.dataNascimento}</span></p>
+                    <p><strong>Endereço:</strong> <span id="endereco">{pessoa.endereco}</span></p>
+                    <p><strong>Senha:</strong> <span id="senha">*******</span></p> {/* Senha não editável */}
+                    <div className="botoes">
+                        <button id="editarBtn" className="botao" onClick={editarDados}>Editar</button>
+                        <Link to="/paciente/inicio" className="botao sair">Sair</Link>
+                    </div>
+                </div>
+            ) : (
+                <div id="editarForm" className="form-editar">
+                    <h2 className="subtitulo">Editar Informações</h2>
+                    {erro && <p className="erro">{erro}</p>}
+                    <p><strong>Nome:</strong> <span id="editNome">{pessoa.nome}</span></p>
+                    <p><strong>CPF:</strong> <span id="editCpf">{pessoa.cpf}</span></p>
+                    <p><strong>Telefone:</strong> <input type="text" id="editTelefone" className="input" value={novoTelefone} onChange={(e) => setNovoTelefone(e.target.value)} /></p>
+                    <p><strong>Endereço:</strong> <input type="text" id="editEndereco" className="input" value={novoEndereco} onChange={(e) => setNovoEndereco(e.target.value)} /></p>
+                    
+                    <button id="concluirBtn" className="botao" onClick={concluirEdicao}>Concluir</button>
+                </div>
+            )}
         </S.SectionDados>
     );
 }
 
 export default Dados;
-
-

@@ -1,27 +1,16 @@
 import { Link } from "react-router-dom"
-
 import * as S from "./stylePaciente.jsx";
+
+// Imagens
+import Historico from "../../assets/imagens/historico.png";
+import Agenda from "../../assets/imagens/agendamento.png";
+import Especialistas from "../../assets/imagens/especialistas.png";
 
 
 function Inicio() {
   return (
     <>
       <S.SectionInicio>
-
-        <section className="esquerda">
-          <div className="parteCima">
-            <div className="usuario">
-              <Link to="/paciente/meusdados"><img src="./perfil.png" alt="" width="100%" /></Link>
-            </div>
-            <div className="dadosDoUsuario">
-              <p className="paginainicial"><Link to="/paciente/meusDados">MeusDados</Link></p>
-            </div>
-          </div>
-          <div className="sair">
-            <p className="sair"><Link to="/">Sair</Link></p>
-          </div>
-        </section>
-        <section class="direita">
           <div class="titulo">
             <h3>Bem-Vindo a sua página!!</h3>
           </div>
@@ -37,26 +26,24 @@ function Inicio() {
           <div class="servicos">
             <div class="elementos">
               <div class="icones">
-                <img src="./historico.png" alt="" width="100%" />
+                <img src={Historico} alt="" width="100%" />
               </div>
               <Link to="/paciente/historico">Historico</Link>
             </div>
             {/* <div class="elementos">
               <div class="icones">
-                <img src="./agendamento.png" alt="" width="100%" />
+                <img src={Agenda} alt="" width="100%" />
               </div>
               <Link to="/paciente/historico">Agendamentos</Link>
               
             </div> */}
             <div class="elementos">
               <div class="icones">
-                <img src="./especialistas.png" alt="" width="100%" />
+                <img src={Especialistas} alt="" width="100%" />
               </div>
               <Link to="/paciente/especialistas"> Lista de especialistas</Link>
-             
             </div>
           </div>
-        </section>
       </S.SectionInicio>
     </>
   )

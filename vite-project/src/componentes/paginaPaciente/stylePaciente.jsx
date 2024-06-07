@@ -1,27 +1,127 @@
 import styled from "styled-components";
 
-export const SectionInicio = styled.section`
-.pagina{
-    display: flex;
-    flex-direction: column;
-}
-
-.direita{
-    width: 70%;
-    height: 150px;
+export const Sectionpagina = styled.section`
+    .pagina{
+        width: 100%;
+        flex-direction: column;
+    }
     
-    padding-left: 250px;
-    margin: auto;
-}
+    .direita{
+        width: 90%;
+        margin: auto;
+    }
 
-.titulo h3{
-    font-size: 40px;
-    padding-top: 10px;
-    padding-bottom: 40px;
-}
+    .titulo h3{
+        font-size: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .direita p{
+        padding-top: 80px;
+        padding-bottom: 20px;
+        color: #333;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .direita a{
+
+        color: #333;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .direita h4{
+        padding: 10px;
+        
+        color: #333;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+
+    .esquerda{
+        width: 100%;
+        // height: 100vh;
+
+        background-color: #0DB26F;
+        // position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .parteCima{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usuario{
+        width: 50%;
+    }
+
+    .esquerda p, .esquerda a{
+        color: white;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        
+        padding-top: 10px;
+    }
+
+
+    
+    @media screen and (max-width: 1030px) {
+        .direita p {
+            padding-top: 40px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+    }
+
+
+    @media screen and (min-width: 1030px) {
+        .pagina{
+            display: flex;
+        }
+
+        .esquerda{
+            width: 20%;
+            height: 100vh;
+
+            position: fixed;
+        }
+        .direita{
+            width: 70%;
+            height: 150px;
+            
+            padding-left: 250px; //Mudar valores
+        }
+
+        .titulo h3{
+            font-size: 40px;
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+        
+        .direita h4{
+            font-size: 20px;
+        }
+
+    }
+
+`
+
+export const SectionInicio = styled.section`
 
 .proximasConsultas{
-    width: 80%;
+    width: 100%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -32,24 +132,8 @@ export const SectionInicio = styled.section`
     list-style: none;    
 }
 
-.icones{
-    width: 80px;
-}
-
-.direita p{
-    padding-top: 80px;
-
-    color: #333;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-.direita h4{
-    padding: 10px;
-    
-    color: #333;
-    border-radius: 5px;
-    font-size: 20px;
+.proximasConsultas li{
+    padding: 10px;  
 }
 
 .servicos{
@@ -59,6 +143,7 @@ export const SectionInicio = styled.section`
     text-align: center;
 
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .elementos {
@@ -70,122 +155,121 @@ export const SectionInicio = styled.section`
 }
 
 
-.esquerda{
-    width: 20%;
-    height: 100vh;
-
-    background-color: #0DB26F;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.parteCima{
+.icones{
+    width: 100px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.usuario{
-    width: 50%;
+
+
+@media screen and (max-width: 1030px) {
+    .servicos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elementos {
+        padding: 20px;
+    }
+
 }
 
-.esquerda p{
-    color: white;
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
+@media screen and (min-width: 1030px) {
+    .proximasConsultas{
+    width: 80%;
 }
+
+}
+
 
 `
 
 export const SectionDados = styled.section`
+
+
+.titulo {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
     
-.campo{   
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
+    padding-top: 80px;
+}
 
+.subtitulo {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.dados, .form-editar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dados p, .form-editar p {
+    margin-bottom: 10px;
+}
+
+.dados p, .form-editar p  {
     padding: 10px;
 }
 
-input{
-    width: 250px;
-    border: 1px solid black;
-
-    padding: 10px;
-}
-
-input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="number"], rextarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: box-shadow 0.3s ease-in-out;
-}
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-    outline: none; 
-}
-
-.dado{
-    padding-bottom: 10px;
-}
-
-.botaoFinalizar{
+.botoes {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.finalizar {
-    background-color: #0DB26F; 
-    color: white; 
+.botao, .sair {
+    padding: 10px 20px;
     border: none;
-    padding: 10px 20px; 
-    font-size: 20px;
-    cursor: pointer; 
-    border-radius: 5px; 
-    transition: background-color 0.3s, transform 0.3s; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.finalizar:hover {
-    background-color: #218838; 
-    transform: translateY(-2px); 
+.botao {
+    background-color: #007bff;
 }
 
-.finalizar:active {
-    background-color: #1e7e34; 
-    transform: translateY(0);
-    
+.sair {
+    background-color: #dc3545;
+}
+
+.botao:hover, .sair:hover {
+    opacity: 0.8;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.erro {
+    color: #dc3545;
+    margin-bottom: 10px;
 }
 `
 export const SectionHistorico = styled.section`
-    
-.direita p{
-    padding-top: 80px;
-
-    color: #333;
-    border-radius: 5px;
-    font-size: 20px;
-}
 
 .historico {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 50px;
+    // margin: 50px;
 }
 
 .alerta {
     display: flex;
     align-items: center;
-    /* background-color: #f9f9f9; */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
@@ -197,11 +281,12 @@ export const SectionHistorico = styled.section`
 }
 
 .consultas{
-    width: 0%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    margin: 15px;
 }
 
 .info {
@@ -227,32 +312,51 @@ export const SectionHistorico = styled.section`
     display: block;
 }
 
-.triangulo {
-    /* width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none; */
+
+.botao-voltar{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    padding-bottom: 20px;
 }
 
-.alerta:hover .triangulo {
-    /* display: block; */
+.botaoVoltar {
+    background-color: #0DB26F; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 20px;
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+.botaoVoltar:hover {
+    background-color: #0DB26F; 
+    transform: translateY(-2px); 
+}
+
 `
 
-export const SectionMedicos= styled.section`
+export const SectionMedicos = styled.section`
     
 .medicos-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 1200px;
-    margin: 20px;
+    padding: 20px;
+}
+
+.titulo-especialistas{
+    padding: 20px;
+
+}
+
+.titulo-especialistas h2{
+
 }
 
 .medicos {
@@ -285,5 +389,42 @@ export const SectionMedicos= styled.section`
     margin: 10px 0;
     font-size: 1em;
     color: #666666;
+}
+
+
+.botao{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+
+.botao-voltar {
+    background-color: #0DB26F; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 20px;
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.botao-voltar:hover {
+    background-color: #0DB26F; 
+    transform: translateY(-2px); 
+}
+.botao-voltar{
+    background-color: #0DB26F; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 20px;
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 `

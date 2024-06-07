@@ -249,6 +249,7 @@ export const SectionPaginaInicio = styled.section`
         font-size: 30px;
         padding-top: 10px;
         padding-bottom: 10px;
+        text-align: center;
     }
 
     .textoInformativo span {

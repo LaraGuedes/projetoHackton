@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import * as S from "./styleInicio.jsx";
 
 // Imagens
-import Logo from "../../assets/imagens/logo.png";
+import Logo from "../../assets/imagens/logo.jpeg";
 
 // Rotas
 import Inicio from "../inicio/inicio.jsx";
@@ -30,7 +30,7 @@ function Navegacao() {
                             <li className="inicio"><Link to="/">Inicio</Link></li>
                             <li className="sobre"><Link to="/Sobre">Sobre</Link></li>
                             <li className="especialidades"><Link to="/Especialidades">Especialidades</Link></li>
-                            <li className="cadastro"><Link to="/paciente/login">Cadastro</Link></li>
+                            <li className="cadastro"><Link to="/login">Cadastro</Link></li>
                         </ul>
                     </nav>
                 </header>

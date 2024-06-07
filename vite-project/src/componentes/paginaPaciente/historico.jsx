@@ -1,56 +1,57 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import * as S from "./stylePaciente.jsx";
 
+// Imagens
+import Bom from "../../assets/imagens/bom.png";
+import Alerta from "../../assets/imagens/alerta.png";
+import Ruim from "../../assets/imagens/ruim.png";
 
 function Historico() {
     return (
         <S.SectionHistorico>
-            <section class="direita">
-                <div>
-                    <p>Historico de suas consultas anteriores:</p>
-                </div>
-                <div>
-                    <div class="historico">
-                        <div class="alerta">
-                            <div class="consultas">
-                                <img src="./bom.png" alt="Bom" />
-                                Consultas em dia!
-                            </div>
-                            <div class="info">
-                                <div class="legenda">Suas consultas estão em dia!</div>
-                                <div class="triangulo"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestias porro, voluptate odio quis laudantium rerum beatae odit veritatis perferendis similique numquam soluta! Officia animi quidem accusantium exercitationem saepe earum!</div>
-                            </div>
+            <div>
+                <p>Historico ds suas consultas anteriores:</p>
+            </div>
+            <div>
+                <div class="historico">
+                    <div class="alerta">
+                        <div class="consultas">
+                            <img src={Bom} alt="Bom" />
+                            Consultas em dia!
                         </div>
-                        <div class="alerta">
-                            <div class="consultas">
-                                <img src="./alerta.png" alt="Atenção" />
-                                Consultas próximas
-                            </div>
-                            <div class="info">
-                                <div class="legenda">Você tem consultas em breve!</div>
-                                <div class="triangulo"></div>
-                            </div>
+                        <div class="info">
+                            <div class="legenda">Suas consultas estão em dia!</div>
+                            <div class="triangulo"> Dr. Carlos - Cardiologia - 07/03/2024 - 10:00</div>
                         </div>
-                        <div class="alerta">
-                            <div class="consultas">
-                                <img src="./ruim.png" alt="Urgente" />
-                                Consultas atrasadas!
-                            </div>
-                            <div class="info">
-                                <div class="legenda">Você tem consultas atrasadas!</div>
-                                <div class="triangulo"></div>
-                            </div>
+                    </div>
+                    <div class="alerta">
+                        <div class="consultas">
+                            <img src={Alerta} alt="Atenção" />
+                            Consultas próximas
+                        </div>
+                        <div class="info">
+                            <div class="legenda">Você tem consultas em breve!</div>
+                            <div class="triangulo"> Dra. Ana - Geriatria - 30/12/2023 - 14:30</div>
+                        </div>
+                    </div>
+                    <div class="alerta">
+                        <div class="consultas">
+                            <img src={Ruim} alt="Urgente" />
+                            Consultas atrasadas!
+                        </div>
+                        <div class="info">
+                            <div class="legenda">Você tem consultas atrasadas!</div>
+                            <div class="triangulo">Dr. Silva - Ortopedia - 07/04/2023 - 09:15</div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div className="botao-voltar">
+                <Link to="/paciente/inicio" className="botaoVoltar">Voltar</Link> 
+            </div>
         </S.SectionHistorico>
     );
 }
 
 export default Historico;
-
-
-
-
-
