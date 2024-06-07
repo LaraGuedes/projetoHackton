@@ -1,8 +1,9 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import Inicio from "./componentes/inicio/inicio.jsx";
 
 import Navegacao from "./componentes/inicio/navegacao.jsx"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavegacaoPaciente from "./componentes/paginaPaciente/navegacao.jsx";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -29,7 +30,14 @@ a{
 function App() {
   return (
     <>
-      <Navegacao/>
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/*" element={<Navegacao />} />
+          <Route path="/paciente/*" element={<NavegacaoPaciente />} />
+        </Routes>
+      </BrowserRouter>
+
       <GlobalStyle />
     </>
   );
